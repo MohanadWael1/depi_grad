@@ -1,5 +1,4 @@
 Feature: Test Register Feature
-
   Scenario:Validate Registry Positive Scenario
     Given User Navigates to HomePage
     When User Clicks on My Account Icon
@@ -8,7 +7,7 @@ Feature: Test Register Feature
     And User Click Continue
     Then Successfully Creation should be displayed
 
-
+  @RegressionTest
   Scenario Outline: Invalidate Registry Negative Scenario
     Given User Navigates to HomePage
     When User Clicks on My Account Icon
@@ -21,7 +20,7 @@ Feature: Test Register Feature
       | Fname | Lname | mail | phone | password |
       |       |       |      |       |          |
       | a     | a     | a@a.a| 1     | 1111     |
-      | b     | b     | b.b  | 123   | 2        |
+      | b     | b     | b@b.b| 123   | 2        |
 
 
 

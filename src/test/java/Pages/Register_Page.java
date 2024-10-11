@@ -4,12 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Register_Page {
+    // 1. WebDriver
     WebDriver driver ;
 
+    // 2. Constructor
     public Register_Page(WebDriver driver) {
         this.driver = driver;
     }
 
+    // 3. Actions
     public void EnterFirstName(String Fname)
     {
         driver.findElement(By.xpath("//*[@id=\"input-firstname\"]")).sendKeys(Fname);

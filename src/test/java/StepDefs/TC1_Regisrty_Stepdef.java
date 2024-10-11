@@ -9,19 +9,22 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TC1_Regisrty_Stepdef {
+
+    // 1. Pages
     Home_Page HomePage_Object ;
     SecureAreaPage SecureAreaPage_Object;
     Register_Page RegisterPage_Object;
 
+    // 2. Constructor of definition pages
     public TC1_Regisrty_Stepdef() {
         HomePage_Object = new Home_Page(Hooks.driver);
         SecureAreaPage_Object = new SecureAreaPage(Hooks.driver);
         RegisterPage_Object = new Register_Page(Hooks.driver);
     }
 
+    // 3. Steps
     @Given("User Navigates to HomePage")
     public void UserNavigatestoHomePage() {
-        
         HomePage_Object.NavigateToHomepage();
     }
 
@@ -55,13 +58,11 @@ public class TC1_Regisrty_Stepdef {
     }
 
 
-
     @Then("Successfully Creation should be displayed")
     public void successfullyCreationShouldBeDisplayed() {
         SecureAreaPage_Object.ValidateSuccessfulRegistry();
 
     }
-
 
 
 
