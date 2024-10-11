@@ -18,7 +18,6 @@ public class SecureAreaPage {
 
     public void ValidateUnsuccessfulRegistry()
     {
-;
         Assert.assertTrue(driver.findElement(By.className("text-danger")).isDisplayed());
     }
 }
