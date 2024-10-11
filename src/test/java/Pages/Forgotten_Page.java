@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class Forgotten_Page {
-
     // 1. WebDriver
     WebDriver driver ;
 

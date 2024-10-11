@@ -17,9 +17,9 @@ public class TC1_Regisrty_Stepdef {
 
     // 2. Constructor of definition pages
     public TC1_Regisrty_Stepdef() {
-        HomePage_Object = new Home_Page(Hooks.driver);
+        HomePage_Object       = new Home_Page(Hooks.driver);
         SecureAreaPage_Object = new SecureAreaPage(Hooks.driver);
-        RegisterPage_Object = new Register_Page(Hooks.driver);
+        RegisterPage_Object   = new Register_Page(Hooks.driver);
     }
 
     // 3. Steps

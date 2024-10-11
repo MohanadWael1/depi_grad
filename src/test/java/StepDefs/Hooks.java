@@ -16,9 +16,9 @@ public class Hooks {
         driver.manage().window().maximize();
     }
 
-//    @After
-//    public void CloseBrowser()
-//    {
-//        driver.quit();
-//    }
+    @After
+    public void CloseBrowser()
+    {
+        driver.quit();
+    }
 }

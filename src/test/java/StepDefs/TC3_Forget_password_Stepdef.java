@@ -8,14 +8,12 @@ import io.cucumber.java.en.Then;
 
 public class TC3_Forget_password_Stepdef {
     // 1. Pages
-    Home_Page HomePage_Object ;
     Login_Page loginPage_Object ;
     Forgotten_Page forgottenPage_Object;
 
     // 2. Constructor of definition pages
     public TC3_Forget_password_Stepdef() {
-        HomePage_Object = new Home_Page(Hooks.driver);
-        loginPage_Object = new Login_Page(Hooks.driver);
+        loginPage_Object     = new Login_Page(Hooks.driver);
         forgottenPage_Object = new Forgotten_Page(Hooks.driver);
     }
 

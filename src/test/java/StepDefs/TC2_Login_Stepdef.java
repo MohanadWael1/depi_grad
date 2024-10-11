@@ -1,5 +1,6 @@
 package StepDefs;
 
+import Pages.Account_Page;
 import Pages.Home_Page;
 import Pages.Login_Page;
 import io.cucumber.java.en.And;
@@ -9,12 +10,14 @@ public class TC2_Login_Stepdef {
     // 1. Pages
     Home_Page HomePage_Object ;
     Login_Page loginPage_Object ;
+    Account_Page accountPage_Object;
 
 
     // 2. Constructor of definition pages
     public TC2_Login_Stepdef() {
-        HomePage_Object = new Home_Page(Hooks.driver);
-        loginPage_Object = new Login_Page(Hooks.driver);
+        HomePage_Object    = new Home_Page(Hooks.driver);
+        loginPage_Object   = new Login_Page(Hooks.driver);
+        accountPage_Object = new Account_Page(Hooks.driver);
     }
 
     // 3. Steps
@@ -31,7 +34,7 @@ public class TC2_Login_Stepdef {
 
     @Then("Account Page appears")
     public void accountPageAppears() {
-        loginPage_Object.AsserAccountPage();
+        accountPage_Object.AsserAccountPage();
     }
 
     @Then("Error message Should be displayed")
