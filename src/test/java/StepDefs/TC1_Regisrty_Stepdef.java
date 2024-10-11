@@ -50,12 +50,15 @@ public class TC1_Regisrty_Stepdef {
         RegisterPage_Object.Enterpassword(password);
         RegisterPage_Object.Enterpasswordconfirm(password);
         RegisterPage_Object.AcceptPrivacypolicy();
+        RegisterPage_Object.Continuebtnclick();
+
     }
 
-    @And("User Click Continue")
-    public void userClickContinue() {
-        RegisterPage_Object.Continuebtnclick();
-    }
+//    @And("User Click Continue")
+//    public void userClickContinue() {
+//        RegisterPage_Object.Continuebtnclick();
+//
+//    }
 
 
     @Then("Successfully Creation should be displayed")

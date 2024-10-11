@@ -4,7 +4,6 @@ Feature: Test Register Feature
     When User Clicks on My Account Icon
     And User Click on Register
     And User Enters Credentials "h" , "h" ,"h@h.c" , "1234" ,"hhhh"
-    And User Click Continue
     Then Successfully Creation should be displayed
 
   @RegressionTest
@@ -13,7 +12,6 @@ Feature: Test Register Feature
     When User Clicks on My Account Icon
     And User Click on Register
     And User Enters Credentials "<Fname>" , "<Lname>" ,"<mail>" , "<phone>" ,"<password>"
-    And User Click Continue
     Then Unsuccessfull Registry Message appears
 
     Examples:
