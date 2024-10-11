@@ -23,6 +23,10 @@ public class Login_Page {
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input")).click();
     }
 
+    public void ClickForgottenPasswordBtutton (){
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/div[2]/a")).click();
+    }
+
     // should i move it to new class for account page ?
     public void AsserAccountPage (){
         Assert.assertEquals(driver.getCurrentUrl(),"https://awesomeqa.com/ui/index.php?route=account/account");
@@ -31,6 +35,10 @@ public class Login_Page {
 
     public void AssertErrorMessage (){
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]")).getText().contains("Warning"));
+    }
+
+    public void AssertPasswordSendsToEmail (){
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]")).getText().contains("An email with a confirmation link has been sent your email address."));
     }
 
 }

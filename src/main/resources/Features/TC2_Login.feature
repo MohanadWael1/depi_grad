@@ -1,4 +1,3 @@
-@RegressionTest
 Feature: Test Login Feature
 
   Scenario: Validate Login Positive Scenario
