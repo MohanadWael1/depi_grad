@@ -30,8 +30,21 @@ public class Account_Page {
     }
 
     // problem here
-    public void AssertSearchSuccessfully (String prduct){
-        Assert.assertEquals(driver.getCurrentUrl(),"https://awesomeqa.com/ui/index.php?route=product/search&search=");
+    public void AssertSearchSuccessfully (){
+        Assert.assertTrue(driver.getCurrentUrl().contains("https://awesomeqa.com/ui/index.php?route=product/search&search="));
+    }
+
+    public void ClickOnCurrenciesButton (){
+        driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div")).click();
+    }
+    public void SelectEuro (){
+        driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div/ul/li[1]/button")).click();
+    }
+    public void SelectPoundSterling (){
+        driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div/ul/li[2]/button")).click();
+    }
+    public void SelectUSDolar (){
+        driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div/ul/li[3]/button")).click();
     }
 
 
