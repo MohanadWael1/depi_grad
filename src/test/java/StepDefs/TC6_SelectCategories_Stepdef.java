@@ -2,8 +2,8 @@ package StepDefs;
 
 import Pages.Home_Page;
 import Pages.SecureAreaPage;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class TC6_SelectCategories_Stepdef {
 
@@ -20,7 +20,7 @@ public class TC6_SelectCategories_Stepdef {
 
 
     // 3. Steps
-    @Given("User Click On Category Randomly")
+    @When("User Click On Category Randomly")
     public void UserClickOnCategoryRandomly() {
         homePage.selectRandomCategory();
     }

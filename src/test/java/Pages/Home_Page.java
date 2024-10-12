@@ -2,7 +2,9 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 
 import java.util.Objects;
 import java.util.HashMap;
@@ -137,8 +139,35 @@ public class Home_Page {
             // Click on the selected subcategory
             driver.findElement(By.xpath(selectedSubCategoryXPath)).click();
         }
+    }
 
 
+    public void hoverRandomCategory() {
+        Random random = new Random();
+        List<String> mainCategories = new ArrayList<>(categories.keySet());
+        String randomMainCategoryXPath = mainCategories.get(random.nextInt(mainCategories.size()));
+
+        WebElement mainCategoryElement = driver.findElement(By.xpath(randomMainCategoryXPath));
+
+        //Perform Hover
+        Actions actions = new Actions(driver);
+        actions.moveToElement(mainCategoryElement).perform();
+
+        //Waiting
+        try {
+            Thread.sleep(500); //
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //Subcategories
+        List<String> subCategories = categories.get(randomMainCategoryXPath);
+        if (!subCategories.isEmpty()) {
+            String randomSubCategoryXPath = subCategories.get(random.nextInt(subCategories.size()));
+            WebElement subCategoryElement = driver.findElement(By.xpath(randomSubCategoryXPath));
+            //Perform Hover
+            actions.moveToElement(subCategoryElement).perform();
+        }
     }
 
 }
