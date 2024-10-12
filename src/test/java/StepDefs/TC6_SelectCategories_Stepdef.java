@@ -1,7 +1,6 @@
 package StepDefs;
 
 import Pages.Home_Page;
-import Pages.Register_Page;
 import Pages.SecureAreaPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
