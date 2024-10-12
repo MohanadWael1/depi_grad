@@ -20,4 +20,13 @@ public class SecureAreaPage {
     {
         Assert.assertTrue(driver.findElement(By.className("text-danger")).isDisplayed());
     }
+
+    public void CurrencyChangeValidation()
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div/button/strong")).getText().contains("€") ||
+                driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div/button/strong")).getText().contains("£") ||
+                driver.findElement(By.xpath("//*[@id=\"form-currency\"]/div/button/strong")).getText().contains("$"));
+    }
+
+
 }
