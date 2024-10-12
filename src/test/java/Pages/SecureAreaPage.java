@@ -29,4 +29,7 @@ public class SecureAreaPage {
     }
 
 
+    public void ValidateTheChosenCategoryPageWillBeShown(){
+        Assert.assertTrue( driver.findElement(By.xpath("/html/body/div[2]/div/div/h2")).isDisplayed() );
+    }
 }
