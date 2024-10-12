@@ -170,6 +170,36 @@ public class Home_Page {
         }
     }
 
+    public void SelectItemsToWhisList(String item)
+    {
+        int i ;
+        String[] HomepageItems={"//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[2]",
+                "//*[@id=\"content\"]/div[2]/div[2]/div/div[3]/button[2]",
+                "//*[@id=\"content\"]/div[2]/div[3]/div/div[3]/button[2]",
+                "//*[@id=\"content\"]/div[2]/div[4]/div/div[3]/button[2]"};
+
+            if(Objects.equals(item, ""))
+            {
+                i = 0 ;
+            }
+
+            else
+            {
+                i = Integer.valueOf(item);
+            }
+
+
+        for(int j=0 ; j<i ; j++)
+        {
+            driver.findElement(By.xpath(HomepageItems[j])).click();
+        }
+    }
+
+    public void HomePageReturn()
+    {
+        driver.findElement(By.xpath("//*[@id=\"logo\"]/a/img")).click();
+    }
+
 }
 
 

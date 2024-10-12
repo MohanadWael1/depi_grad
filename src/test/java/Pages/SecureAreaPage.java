@@ -32,4 +32,9 @@ public class SecureAreaPage {
     public void ValidateTheChosenCategoryPageWillBeShown(){
         Assert.assertTrue( driver.findElement(By.xpath("/html/body/div[2]/div/div/h2")).isDisplayed() );
     }
+
+    public void ValidateNumberOfSelectedFeaturesInWishList(String item)
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"wishlist-total\"]/span")).getText().contains(item));
+    }
 }
