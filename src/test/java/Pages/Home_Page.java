@@ -205,6 +205,11 @@ public class Home_Page {
         driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[3]")).click();
     }
 
+    public void AddItemsToShippingList()
+    {
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[1]")).click();
+    }
+
 }
 
 

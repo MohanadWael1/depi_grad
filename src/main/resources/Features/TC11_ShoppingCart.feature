@@ -1,4 +1,6 @@
-  Feature: Test Shopping Cart
+@RegressionTest
+
+Feature: Test Shopping Cart
 
     Scenario: User Adds Item To Shopping Cart
       Given User Navigates to HomePage

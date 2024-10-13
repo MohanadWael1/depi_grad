@@ -1,4 +1,3 @@
-@RegressionTest
 
 Feature: Test Compare List
 
