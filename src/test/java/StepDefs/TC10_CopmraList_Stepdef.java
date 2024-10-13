@@ -17,11 +17,12 @@ public class TC10_CopmraList_Stepdef {
     @And("User Add Product to Compare List")
     public void UserAddProducttoCompareList()
     {
-
+        HomePage_Object.AddItemsToCompareList();
 
     }
 
     @Then("Confirmation Message Appears")
     public void confirmationMessageAppears() {
+        SecureAreaPage_Object.ValidateSuccessfulCompareList();
     }
 }
