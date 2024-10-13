@@ -200,6 +200,11 @@ public class Home_Page {
         driver.findElement(By.xpath("//*[@id=\"logo\"]/a/img")).click();
     }
 
+    public void AddItemsToCompareList()
+    {
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[3]")).click();
+    }
+
 }
 
 

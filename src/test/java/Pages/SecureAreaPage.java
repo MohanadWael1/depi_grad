@@ -37,4 +37,9 @@ public class SecureAreaPage {
     {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"wishlist-total\"]/span")).getText().contains(item));
     }
+
+    public void ValidateSuccessfulCompareList()
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"common-home\"]/div[1]")).isDisplayed());
+    }
 }
