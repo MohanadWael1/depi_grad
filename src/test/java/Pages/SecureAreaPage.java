@@ -42,4 +42,9 @@ public class SecureAreaPage {
     {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"common-home\"]/div[1]")).isDisplayed());
     }
+
+    public void ValidateOrderPlacing()
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).isDisplayed());
+    }
 }

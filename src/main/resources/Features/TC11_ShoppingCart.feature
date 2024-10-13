@@ -1,4 +1,4 @@
-@RegressionTest
+
 
 Feature: Test Shopping Cart
 
