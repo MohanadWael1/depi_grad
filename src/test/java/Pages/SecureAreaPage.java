@@ -81,4 +81,10 @@ public class SecureAreaPage {
         Assert.assertNotEquals(pre, post);
     }
 
+
+    public void ValidateLogout()
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).isDisplayed());
+    }
+
 }

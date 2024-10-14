@@ -247,6 +247,11 @@ public class Home_Page {
         return TotalValue;
     }
 
+    public void Logout()
+    {
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[5]/a")).click();
+    }
+
 
 
 
