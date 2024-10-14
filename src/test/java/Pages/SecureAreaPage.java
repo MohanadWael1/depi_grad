@@ -47,4 +47,38 @@ public class SecureAreaPage {
     {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).isDisplayed());
     }
+
+    public void ValidateContactUsPage() {
+        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).getText() , "Contact Us");
+    }
+
+    public void ValidateEnquirySent() {
+        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/p")).getText() , "Your enquiry has been successfully sent to the store owner!");
+    }
+
+    public void ValidateAboutUsPage() {
+        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).getText() , "About Us");
+    }
+
+    public void ValidateSearchResults() {
+        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/label")).getText() , "Search Criteria");
+    }
+
+    public void ValidateSiteMapPage() {
+        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).getText() , "Site Map");
+    }
+
+    public void ValidateNavigationToOptionPage(){
+        Assert.assertTrue( driver.findElement(By.xpath("/html/body/div[2]/div/div/h2")).isDisplayed() );
+    }
+
+    public void ValidateItemIconInfo() {
+        Assert.assertTrue( driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/table/tbody/tr[1]/td[1]/strong")).isDisplayed() );
+        Assert.assertTrue( driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/table/tbody/tr[2]/td[1]/strong")).isDisplayed() );
+    }
+
+    public void ValidatePreCostIsDifferentFromPostCost(String pre, String post) {
+        Assert.assertNotEquals(pre, post);
+    }
+
 }

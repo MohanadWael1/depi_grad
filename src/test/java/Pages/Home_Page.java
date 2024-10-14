@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 
 import java.util.Objects;
@@ -155,7 +156,7 @@ public class Home_Page {
 
         //Waiting
         try {
-            Thread.sleep(500); //
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -214,6 +215,43 @@ public class Home_Page {
     {
         driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[5]")).click();
     }
+
+
+    public void ClickOnContactUs() {
+        driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul/li[1]/a/i")).click();
+    }
+
+    public void ClickOnAboutUs() {
+        driver.findElement(By.xpath("/html/body/footer/div/div/div[1]/ul/li[1]/a")).click();
+    }
+
+    public void SearchOnProduct(String element) {
+        driver.findElement(By.xpath("//*[@id=\"search\"]/input")).sendKeys(element);
+    }
+
+    public void ClickSearchIcon(){
+        driver.findElement(By.xpath("//*[@id=\"search\"]/span/button")).click();
+    }
+
+    public void ClickOnSiteMap() {
+        driver.findElement(By.xpath("/html/body/footer/div/div/div[2]/ul/li[3]/a")).click();
+    }
+
+    public void ClickOnItemIcon() {
+        driver.findElement(By.xpath("/html/body/header/div/div/div[3]/div/button")).click();
+    }
+
+    String TotalValue;
+    public String ItemsCostValue() {
+        TotalValue = driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/table/tbody/tr[2]/td[2]")).getText();
+        return TotalValue;
+    }
+
+
+
+
+
+
 
 }
 
