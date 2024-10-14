@@ -252,6 +252,24 @@ public class Home_Page {
         driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[5]/a")).click();
     }
 
+    public void HomePageSliderHoverAndClick()
+    {
+        WebElement HomepageSlider = driver.findElement(By.xpath("//*[@id=\"content\"]/div[1]/div[3]/div[1]"));
+
+        //Perform Hover
+        Actions actions = new Actions(driver);
+        actions.moveToElement(HomepageSlider).perform();
+
+        //Waiting
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[1]/div[3]/div[1]")).click();
+    }
+
 
 
 

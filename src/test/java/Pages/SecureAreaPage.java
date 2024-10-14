@@ -87,4 +87,10 @@ public class SecureAreaPage {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"content\"]/h1")).isDisplayed());
     }
 
+
+    public void ValidateSliderItemChanged()
+    {
+       Assert.assertFalse(driver.findElement(By.xpath("//*[@id=\"slideshow0\"]/div/div[4]/a/img")).isDisplayed());
+    }
+
 }
