@@ -1,4 +1,3 @@
-@RegressionTest
 
 Feature: Test Successful Payment
 

@@ -48,4 +48,14 @@ public class Account_Page {
     }
 
 
+    public void NavigateToChangePassword()
+    {
+        driver.findElement(By.xpath("//*[@id=\"content\"]/ul[1]/li[2]/a")).click();
+    }
+
+
+
+
+
+
 }

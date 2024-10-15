@@ -93,4 +93,9 @@ public class SecureAreaPage {
        Assert.assertFalse(driver.findElement(By.xpath("//*[@id=\"slideshow0\"]/div/div[4]/a/img")).isDisplayed());
     }
 
+    public void ValidateSuccessfulPasswordChanged()
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"account-account\"]/div[1]")).getText().contains("Success: Your password has been successfully updated."));
+    }
+
 }
