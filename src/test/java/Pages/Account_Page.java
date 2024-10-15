@@ -53,9 +53,13 @@ public class Account_Page {
         driver.findElement(By.xpath("//*[@id=\"content\"]/ul[1]/li[2]/a")).click();
     }
 
+    public void ClickShoppingCart() {
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[4]")).click();
+    }
 
-
-
+    public void ClickWishList() {
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[3]")).click();
+    }
 
 
 }

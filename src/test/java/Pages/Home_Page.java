@@ -271,6 +271,9 @@ public class Home_Page {
     }
 
 
+    public void AddToWishList() {
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[4]/div/div[3]/button[2]")).click();
+    }
 
 
 

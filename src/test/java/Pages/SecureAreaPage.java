@@ -98,4 +98,14 @@ public class SecureAreaPage {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"account-account\"]/div[1]")).getText().contains("Success: Your password has been successfully updated."));
     }
 
+    public void ValidateShoppingCartStateChange(String pre, String post){
+        Assert.assertNotEquals(pre,post);
+    }
+
+    public void ValidateWishListStateChange(int pre, int post){
+        Assert.assertNotEquals(pre,post);
+    }
+
+
+
 }
