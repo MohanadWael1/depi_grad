@@ -5,7 +5,7 @@ Feature: Test Successful Payment
     Given User Navigates to HomePage
     Then User Clicks on My Account Icon
     And   User Click on Login
-    And   User Enter Email and Password "h@h.c" "hhhh"
+    And   User Enter Email and Password "qq@qq.q" "qqqq"
     And   User Clicks on HomePage
     And User Add Product to Shipping List
     And User Navigates to checkout page

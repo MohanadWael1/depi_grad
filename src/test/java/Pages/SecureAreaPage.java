@@ -106,6 +106,10 @@ public class SecureAreaPage {
         Assert.assertNotEquals(pre,post);
     }
 
+    public void ValidateAccountEditSuccessfully()
+    {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"account-account\"]/div[1]")).getText().contains("Success: Your account has been successfully updated"));
+    }
 
 
 }

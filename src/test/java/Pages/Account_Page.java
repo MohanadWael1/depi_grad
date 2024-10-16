@@ -62,4 +62,11 @@ public class Account_Page {
     }
 
 
+    public void NavigateToEdityouraccountInfomation()
+    {
+        driver.findElement(By.xpath("//*[@id=\"content\"]/ul[1]/li[1]/a")).click();
+    }
+
+
+
 }
