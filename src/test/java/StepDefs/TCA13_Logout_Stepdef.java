@@ -12,9 +12,6 @@ public class TCA13_Logout_Stepdef {
     public TCA13_Logout_Stepdef() {
         homePage_Object = new Home_Page(Hooks.driver);
         secureAreaPage_Object = new SecureAreaPage(Hooks.driver);
-
-
-
     }
 
     @And("User Clicks on Logout")

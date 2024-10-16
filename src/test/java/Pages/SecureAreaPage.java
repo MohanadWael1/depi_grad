@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import java.util.Objects;
+
 public class SecureAreaPage {
     WebDriver driver ;
 
@@ -111,5 +113,39 @@ public class SecureAreaPage {
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"account-account\"]/div[1]")).getText().contains("Success: Your account has been successfully updated"));
     }
 
+    public void ValidateHomePage(){
+        Assert.assertTrue( driver.findElement(By.xpath("//*[@id=\"content\"]/div[1]/div[2]")).isDisplayed() );
+    }
+
+    public void ValidateSortedByPrice(){
+
+        String price1Text = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[2]/div[1]/p[2]/span")).getText();
+        String price2Text = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[2]/div/div[2]/div[1]/p[2]/span")).getText();
+        String price3Text = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[3]/div/div[2]/div[1]/p[2]/span")).getText();
+
+        String price1Only = price1Text.replace("Ex Tax: ", "");
+        double price1 = Double.parseDouble(price1Only.replace("$", "").replace(",", ""));
+        String price2Only = price2Text.replace("Ex Tax: ", "");
+        double price2 = Double.parseDouble(price2Only.replace("$", "").replace(",", ""));
+        String price3Only = price3Text.replace("Ex Tax: ", "");
+        double price3 = Double.parseDouble(price3Only.replace("$", "").replace(",", ""));
+
+
+        Assert.assertTrue(price1 < price2, "Price 1 should be lesser than Price 2");
+        Assert.assertTrue(price2 < price3, "Price 2 should be lesser than Price 3");
+
+    }
+
+    public void ValidateProductDetailsPage(){
+        Assert.assertTrue( driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/ul[2]/li[1]/a")).isDisplayed() );
+    }
+
+    public void ValidateQuantityChange(String quantity){
+        //Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/input")).getText() , quantity);
+    }
+
+    public void ValidateViewChange(){
+        Assert.assertTrue(Objects.requireNonNull(driver.findElement(By.xpath("//*[@id=\"list-view\"]")).getAttribute("class")).contains("active"), "The grid view button is not active");
+    }
 
 }

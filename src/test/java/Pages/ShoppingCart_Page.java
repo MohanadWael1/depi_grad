@@ -23,4 +23,15 @@ public class ShoppingCart_Page {
 
         return state;
     }
+
+    public void ChangeTheQuantity(String quantity){
+        driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/input")).clear();
+        driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/input")).sendKeys(quantity);
+    }
+
+    public void ClickOnRefreshIcon(){
+        driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/span/button[1]")).click();
+    }
+
+
 }

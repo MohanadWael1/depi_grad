@@ -275,6 +275,14 @@ public class Home_Page {
         driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[4]/div/div[3]/button[2]")).click();
     }
 
+    public void ClickOnPhoneCategory(){
+        driver.findElement(By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[6]/a")).click();
+    }
+
+    public void ChooseItem(){
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[1]/a")).click();
+    }
+
 
 
 
