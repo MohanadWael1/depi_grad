@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Test Forget password Feature
 
   Scenario: Check Forgotten Password Functionality Positive Scenario

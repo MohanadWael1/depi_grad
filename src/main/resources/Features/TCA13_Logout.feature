@@ -1,4 +1,4 @@
-
+@RegressionTest
 Feature: Test Logout
 
   Scenario: User Login the Logout

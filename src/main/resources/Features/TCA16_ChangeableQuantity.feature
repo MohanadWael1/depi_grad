@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Test Basket Edit
 
   Scenario: Verify That User can edit the items in basket
@@ -6,10 +7,10 @@ Feature: Test Basket Edit
     And   User Click on Login
     And   User Enter Email and Password "qq@qq.q" "qqqq"
     Then  Account Page appears
-    When User Navigates to HomePage
-    And User Add an item to basket
-    And User Click on Shopping Cart Icon
-    And User Change The Quantity
-    And User Refresh The Page
-    Then The Quantity Must Be Change
+    When  User Navigates to HomePage
+    And   User Add an item to basket
+    And   User Click on Shopping Cart Icon
+    And   User Change The Quantity
+    And   User Refresh The Page
+    Then  The Quantity Must Be Change
 

@@ -8,7 +8,7 @@ Feature: Test Adding Items to WhishList
     And   User Enter Email and Password "qq@qq.q" "qqqq"
     And   User Clicks on HomePage
     And   User Add  Items in Homepage to WhishList "<items>"
-    Then Number of Items is presented on Homepage "<items>"
+    Then  Number of Items is presented on Homepage "<items>"
 
     Examples:
     |items|

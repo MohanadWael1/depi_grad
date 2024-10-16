@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Test Search
 
   Scenario Outline: User Search For Any Product and Change Currencies and add Items to Wishlist
@@ -10,6 +11,6 @@ Feature: Test Search
 
     Examples:
     |search_text|
-    | Iphone    |
+    |Iphone     |
     |Samsung    |
     |           |

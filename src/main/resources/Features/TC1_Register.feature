@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Test Register Feature
   Scenario:Validate Registry Positive Scenario
     Given User Navigates to HomePage

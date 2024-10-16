@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Test Change Sorting Method
 
   Scenario: Verify Sort By field is working

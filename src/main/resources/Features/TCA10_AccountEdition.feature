@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Test Account Info Edition
 
   Scenario: User Change Account Information and then return it back
