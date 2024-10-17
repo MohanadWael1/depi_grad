@@ -36,11 +36,11 @@ public class TCA1_ContactUs_Stepdef {
         secureAreaPage.ValidateContactUsPage();
     }
 
-    @When("User fill the required information")
-    public void userFillTheRequiredInformation() {
-        contactUsPage.FillNameField("hhhh");
-        contactUsPage.FillMailField("h@h.c");
-        contactUsPage.FillEnquiryField("Why does everything good have a short lifespan?");
+    @When("User fill the required information {string} , {string} , {string}")
+    public void userFillTheRequiredInformation(String FName ,String Mail ,String Enquiry) {
+        contactUsPage.FillNameField(FName);
+        contactUsPage.FillMailField(Mail);
+        contactUsPage.FillEnquiryField(Enquiry);
     }
 
 
