@@ -8,7 +8,8 @@ import io.cucumber.testng.CucumberOptions;
         glue = "StepDefs",                              // Path Source
         tags = "@RegressionTest",                       // Annotation
         plugin = {"pretty",
-                "html:target/cucumber-reports/Report.html"
+                "html:target/cucumber-reports/Report.html",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
