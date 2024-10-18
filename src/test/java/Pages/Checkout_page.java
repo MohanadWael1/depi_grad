@@ -31,6 +31,7 @@ public class Checkout_page {
 
         Select country_obj = new Select(driver.findElement(By.xpath("//*[@id=\"input-payment-country\"]")));
         country_obj.selectByIndex(2);
+        country_obj.selectByValue("Egypt");
 
 
         Select Region_obj = new Select(driver.findElement(By.xpath("//*[@id=\"input-payment-zone\"]")));
