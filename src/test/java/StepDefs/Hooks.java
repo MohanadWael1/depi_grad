@@ -14,7 +14,7 @@ public class Hooks {
     @BeforeAll
     public static void OpenBrowser()
     {
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
