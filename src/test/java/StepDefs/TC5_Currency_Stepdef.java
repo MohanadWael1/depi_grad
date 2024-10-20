@@ -17,8 +17,6 @@ public class TC5_Currency_Stepdef {
     }
 
 
-
-
     @When("User Change Currency {string}")
     public void userChangeCurrency(String currency) {
         HomePage_Object.ChangeCurrency(currency);

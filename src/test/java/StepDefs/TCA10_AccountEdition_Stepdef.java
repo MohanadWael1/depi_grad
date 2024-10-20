@@ -34,4 +34,9 @@ public class TCA10_AccountEdition_Stepdef {
     public void accountEditionMessageAppears() {
         secureAreaPage_object.ValidateAccountEditSuccessfully();
     }
+
+    @And("User Click on My Account Info")
+    public void userClickOnMyAccountInfo() {
+        homePage_object.ClickOnMyAccInfo();
+    }
 }

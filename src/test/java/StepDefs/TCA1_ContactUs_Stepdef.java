@@ -37,9 +37,9 @@ public class TCA1_ContactUs_Stepdef {
     }
 
     @When("User fill the required information {string} , {string} , {string}")
-    public void userFillTheRequiredInformation(String FName ,String Mail ,String Enquiry) {
-        contactUsPage.FillNameField(FName);
-        contactUsPage.FillMailField(Mail);
+    public void userFillTheRequiredInformation(String FistName ,String EMailAdd ,String Enquiry) {
+        contactUsPage.FillNameField(FistName);
+        contactUsPage.FillMailField(EMailAdd);
         contactUsPage.FillEnquiryField(Enquiry);
     }
 

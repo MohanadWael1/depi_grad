@@ -1,13 +1,6 @@
 @RegressionTest
 Feature: Test Login Feature
 
-  Scenario: Validate Login Positive Scenario
-    Given User Navigates to HomePage
-    When  User Clicks on My Account Icon
-    And   User Click on Login
-    And   User Enter Email and Password "qq@qq.q" "qqqq"
-    Then  Account Page appears
-
   Scenario Outline: Invalidate Login Negative Scenario
     Given User Navigates to HomePage
     When  User Clicks on My Account Icon
@@ -23,4 +16,13 @@ Feature: Test Login Feature
       |          |          |
       | A        | A        |
       | @$#      | @$#      |
+
+  Scenario: Validate Login Positive Scenario
+    Given User Navigates to HomePage
+    When  User Clicks on My Account Icon
+    And   User Click on Login
+    And   User Enter Email and Password "qq@qq.q" "qqqq"
+    Then  Account Page appears
+
+
 

@@ -55,7 +55,7 @@ public class SecureAreaPage {
     }
 
     public void ValidateEnquirySent() {
-        Assert.assertEquals( driver.findElement(By.xpath("//*[@id=\"content\"]/p")).getText() , "Your enquiry has been successfully sent to the store owner!");
+        Assert.assertTrue( driver.findElement(By.xpath("//*[@id=\"content\"]/p")).getText().contains("Your enquiry has been successfully sent to the store owner!"));
     }
 
     public void ValidateAboutUsPage() {

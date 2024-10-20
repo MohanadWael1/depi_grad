@@ -9,5 +9,5 @@ Feature: Change Currency
       Examples:
       |currency |
       |Euro     |
-      |Dollar   |
       |Pound    |
+      |Dollar   |
